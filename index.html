@@ -1,0 +1,141 @@
+<!doctype html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="robots" content="noindex">
+<title>Reel-Maschine: So startest du</title>
+<link rel="stylesheet" href="stil.css">
+<style>
+/* Layout: eine schmale Lesespalte fürs Handy. Oben was man braucht, dann fünf nummerierte Schritte
+   (echte Reihenfolge), danach Tipps und Hilfe zum Nachschlagen. */
+:root {
+  --bg: #F1F3F4; --flaeche: #FFFFFF; --tinte: #14181B; --leise: #5B666D; --linie: #D9DEE1;
+  --akzent: #0B6E63; --auf-akzent: #FFFFFF; --hell: #E2F1EE;
+  --schrift: "Poppins", system-ui, -apple-system, "Segoe UI", sans-serif;
+}
+@media (prefers-color-scheme: dark) { :root {
+  --bg: #0F1214; --flaeche: #191E21; --tinte: #EEF2F3; --leise: #9AA6AC; --linie: #2B3338;
+  --akzent: #47CDB8; --auf-akzent: #06211D; --hell: #173832; color-scheme: dark } }
+html { color-scheme: light dark }
+body { margin: 0; background: var(--bg); color: var(--tinte); font: 500 17px/1.55 var(--schrift); }
+.seite { max-width: 640px; margin: 0 auto; padding-block: 28px 64px;
+  padding-left: max(18px, env(safe-area-inset-left, 0px)); padding-right: max(18px, env(safe-area-inset-right, 0px)); }
+h1 { font-size: 2rem; line-height: 1.12; margin: 0 0 10px; font-weight: 800; text-wrap: balance; }
+h2 { font-size: 1.3rem; line-height: 1.2; margin: 44px 0 12px; font-weight: 700; text-wrap: balance; }
+h3 { font-size: 1.05rem; margin: 0 0 6px; font-weight: 700; }
+p { margin: 0 0 12px; } .leise { color: var(--leise); }
+a { color: var(--akzent); font-weight: 600; }
+.kasten { background: var(--flaeche); border: 1px solid var(--linie); border-radius: 16px; padding: 18px; }
+.kasten ul { margin: 0; padding-left: 1.2em; display: grid; gap: 8px; }
+.schritte { list-style: none; margin: 0; padding: 0; display: grid; gap: 14px; counter-reset: s; }
+.schritte > li { counter-increment: s; background: var(--flaeche); border: 1px solid var(--linie); border-radius: 16px; padding: 18px 18px 18px 64px; position: relative; }
+.schritte > li::before { content: counter(s); position: absolute; left: 16px; top: 16px; width: 34px; height: 34px; border-radius: 50%;
+  background: var(--akzent); color: var(--auf-akzent); font-weight: 800; display: grid; place-items: center; }
+.schritte ol { margin: 6px 0 0; padding-left: 1.2em; display: grid; gap: 6px; }
+.sag { display: block; background: var(--hell); border-radius: 12px; padding: 10px 14px; margin: 8px 0; font-weight: 600; }
+.knopf { display: inline-block; background: var(--akzent); color: var(--auf-akzent); text-decoration: none; font-weight: 700; border-radius: 12px; padding: 13px 20px; margin-top: 6px; }
+.knopf:focus-visible, a:focus-visible { outline: 3px solid var(--akzent); outline-offset: 2px; }
+dl { margin: 0; display: grid; gap: 12px; } dt { font-weight: 700; } dd { margin: 2px 0 0; color: var(--leise); }
+.zwei { display: grid; gap: 12px; } @media (min-width: 560px) { .zwei { grid-template-columns: 1fr 1fr; } }
+footer { margin-top: 48px; font-size: .88rem; color: var(--leise); }
+</style>
+</head>
+<body>
+<div class="seite">
+
+<h1>Du filmst. Claude schneidet.</h1>
+<p class="leise">So richtest du die Reel-Maschine ein. Das dauert einmalig etwa fünf Minuten. Danach lädst du nur noch dein Video hoch.</p>
+
+<h2>Das brauchst du</h2>
+<div class="kasten">
+  <ul>
+    <li>Ein Konto bei <a href="https://claude.ai">Claude</a> und die Claude-App auf deinem Handy. Mit dem Tarif Pro schneidest du mehr Reels am Stück.</li>
+    <li>Die Datei <b>reel-maschine.zip</b>, die du mit dem Kauf bekommen hast.</li>
+    <li>Ein Video im Hochformat, in dem du sprichst.</li>
+  </ul>
+</div>
+
+<h2>Einrichten</h2>
+<ol class="schritte">
+  <li>
+    <h3>Claude öffnen</h3>
+    <p>Öffne <a href="https://claude.ai">claude.ai</a> und melde dich an. Am bequemsten geht die Einrichtung einmal am Computer. Du kannst claude.ai aber auch im Browser deines Handys öffnen.</p>
+  </li>
+  <li>
+    <h3>Die Maschine hochladen</h3>
+    <ol>
+      <li>Öffne links das Menü und tippe auf <b>Anpassungen</b>.</li>
+      <li>Wähle <b>Skills</b>.</li>
+      <li>Tippe auf das <b>Plus</b> und dann auf <b>Skill hochladen</b>.</li>
+      <li>Wähle die Datei <b>reel-maschine.zip</b> aus.</li>
+    </ol>
+    <p class="leise">Die Maschine steht jetzt in deiner Liste. Der Schalter daneben muss an sein.</p>
+  </li>
+  <li>
+    <h3>Kurz prüfen, ob Claude rechnen darf</h3>
+    <p>Öffne <b>Einstellungen</b> und dort <b>Funktionen</b>. Diese zwei Schalter müssen an sein. Meistens sind sie es schon.</p>
+    <ol>
+      <li><b>Code in der Cloud ausführen</b></li>
+      <li><b>Ausgehenden Netzwerkverkehr erlauben</b></li>
+    </ol>
+  </li>
+</ol>
+
+<h2>Dein erstes Reel</h2>
+<ol class="schritte">
+  <li>
+    <h3>Video hochladen</h3>
+    <p>Öffne die Claude-App am Handy und starte einen neuen Chat. Tippe auf das Plus, wähle dein Video und schreibe dazu:</p>
+    <span class="sag">Mach ein Reel draus</span>
+  </li>
+  <li>
+    <h3>Vorschau ansehen</h3>
+    <p>Claude schreibt mit, was du sagst, und zeigt dir eine Vorschau in Bildern. Dazu bekommst du vier Vorschläge für die Headline am Anfang. Passt alles, schreibst du <b>OK</b>. Wenn nicht, sagst du in einem Satz, was anders sein soll.</p>
+  </li>
+  <li>
+    <h3>Reel herunterladen und posten</h3>
+    <p>Claude gibt dir das fertige Reel und einen Textvorschlag für die Caption. Lade das Reel herunter und poste es in Instagram. Die Musik wählst du dort selbst aus.</p>
+  </li>
+</ol>
+
+<h2>Dein eigener Look</h2>
+<div class="kasten">
+  <p>Du musst nichts einstellen. Claude sucht Farben und Schrift passend zu deinem Video aus.</p>
+  <p>Wenn du einen festen Look willst, an dem man dich wiedererkennt, tippst du ihn dir im Look-Studio zusammen. Du siehst dort sofort, wie es aussieht. Am Ende kopierst du eine Zeile und schickst sie zusammen mit deinem Video an Claude.</p>
+  <a class="knopf" href="studio/">Zum Look-Studio</a>
+</div>
+
+<h2>So filmst du am besten</h2>
+<div class="zwei">
+  <div class="kasten"><h3>Hochformat, 1080p</h3><p class="leise">Stell die Kamera auf 1080p mit 30 Bildern. In 4K wird die Datei zu groß.</p></div>
+  <div class="kasten"><h3>Höchstens 30 Sekunden pro Clip</h3><p class="leise">Claude nimmt Dateien bis 30 MB an. Für längere Reels schickst du mehrere Clips und schreibst die Reihenfolge dazu.</p></div>
+  <div class="kasten"><h3>Etwas Luft über dem Kopf</h3><p class="leise">Dann hat Claude Platz für die Headline und für große Wörter.</p></div>
+  <div class="kasten"><h3>Einfach reden</h3><p class="leise">Versprecher, Pausen und „äh“ schneidet Claude heraus. Du musst nichts wiederholen.</p></div>
+</div>
+
+<h2>Das kannst du Claude sagen</h2>
+<div class="kasten">
+  <span class="sag">Nimm Headline Nummer 3</span>
+  <span class="sag">Mach den Look wärmer</span>
+  <span class="sag">Bei „Freiheit“ soll ein Herz erscheinen</span>
+  <span class="sag">Weniger Effekte, nur Untertitel</span>
+  <span class="sag">Das Wort ist falsch geschrieben, es heißt …</span>
+  <span class="sag">Ohne Sounds</span>
+</div>
+
+<h2>Wenn etwas hakt</h2>
+<div class="kasten">
+  <dl>
+    <div><dt>Das Video lässt sich nicht hochladen</dt><dd>Es ist größer als 30 MB. Filme kürzer oder in 1080p statt 4K, oder teile es in zwei Clips.</dd></div>
+    <div><dt>Claude schneidet nicht, sondern antwortet nur</dt><dd>Schreib: „Nutze den Skill reel-maschine“. Prüfe auch, ob der Schalter bei den Skills an ist.</dd></div>
+    <div><dt>Beim ersten Mal dauert es länger</dt><dd>Claude lädt einmal pro Chat sein Werkzeug zum Mitschreiben. Das dauert etwa eine Minute.</dd></div>
+    <div><dt>Claude fragt nach dem gesprochenen Text</dt><dd>Dann konnte es nicht selbst mitschreiben. Prüfe die zwei Schalter unter Einstellungen und Funktionen und starte einen neuen Chat. Oder schick den Text einfach mit.</dd></div>
+    <div><dt>Claude sagt, das Limit ist erreicht</dt><dd>Das ist die Nutzungsgrenze deines Claude-Tarifs. Sie setzt sich nach einigen Stunden zurück.</dd></div>
+  </dl>
+</div>
+
+<footer>Reel-Maschine von Business Queens Club. Die Maschine nutzt Claude von Anthropic. Dafür brauchst du ein eigenes Claude-Konto, das nicht im Kauf enthalten ist.</footer>
+</div>
+</body>
+</html>

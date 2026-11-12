@@ -1,0 +1,8 @@
+/* Gemeinsame Schriften: liegen auf dieser Seite selbst, es wird nichts von fremden Servern geladen. */
+@font-face { font-family: "Poppins"; font-weight: 500; font-display: swap; src: url("fonts/Poppins-Medium.ttf") format("truetype"); }
+@font-face { font-family: "Poppins"; font-weight: 600; font-display: swap; src: url("fonts/Poppins-SemiBold.ttf") format("truetype"); }
+@font-face { font-family: "Poppins"; font-weight: 700; font-display: swap; src: url("fonts/Poppins-Bold.ttf") format("truetype"); }
+@font-face { font-family: "Poppins"; font-weight: 800; font-display: swap; src: url("fonts/Poppins-ExtraBold.ttf") format("truetype"); }
+@font-face { font-family: "DM Serif Display"; font-style: italic; font-display: swap; src: url("fonts/DMSerifDisplay-Italic.ttf") format("truetype"); }
+@font-face { font-family: "Instrument Serif"; font-style: italic; font-display: swap; src: url("fonts/InstrumentSerif-Italic.ttf") format("truetype"); }
+@font-face { font-family: "Anton"; font-display: swap; src: url("fonts/Anton-Regular.ttf") format("truetype"); }
